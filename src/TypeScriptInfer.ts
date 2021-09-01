@@ -49,14 +49,18 @@ const initial ={
     photo:null as null | PhotoType
 }
 
-
+type ActionTypes = ReturnType<typeof AC1> | ReturnType<typeof AC2>
 // const reduscer =(state:StateType,action:any)=>{
-const reduscer =(state=initial,action:any)=>{
+const reduscer =(state=initial,action:ActionTypes)=>{
 
     state.photo={
         large:'',
         small:''
     }
+switch (action.type) {
+    case
+}
+
 
     return state}
 
@@ -64,9 +68,7 @@ const reduscer =(state=initial,action:any)=>{
 
 // 11 min
 const AC1 = (age:number)=>({type:'SET-AGE',age}as const)
-const AC2 = (firstName:string,lastName:string)=>({type:'SET-NAMES',firstName,lastName})
+const AC2 = (firstName:string,lastName:string)=>({type:'SET-NAMES',firstName,lastName}as const)
 
-type AC1Type = ReturnType<typeof AC1>
-type AC2Type = ReturnType<typeof AC2>
 
-const action1:AC1Type={type:'SET-AGE', age: 22}
+// const action1:AC1Type={type:'SET-AGE', age: 22}
