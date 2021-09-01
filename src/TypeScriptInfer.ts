@@ -38,3 +38,24 @@ const response2: ServerResponseType<PhotoType> = {
         small:'string',
     }
 };
+
+//
+// type StateType = typeof initial
+
+const initial ={
+    age:10,
+    name:"Dima",
+    user: null as null | UserType,
+    photo:null as null | PhotoType
+}
+
+
+// const reduscer =(state:StateType,action:any)=>{
+const reduscer =(state=initial,action:any)=>{
+
+    state.photo={
+        large:'',
+        small:''
+    }
+
+    return state}
