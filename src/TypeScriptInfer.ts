@@ -59,3 +59,14 @@ const reduscer =(state=initial,action:any)=>{
     }
 
     return state}
+
+
+
+// 11 min
+const AC1 = (age:number)=>({type:'SET-AGE',age}as const)
+const AC2 = (firstName:string,lastName:string)=>({type:'SET-NAMES',firstName,lastName})
+
+type AC1Type = ReturnType<typeof AC1>
+type AC2Type = ReturnType<typeof AC2>
+
+const action1:AC1Type={type:'SET-AGE', age: 22}
